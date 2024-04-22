@@ -30,13 +30,13 @@ app.use(fileUpload({
 }))
 
 //index route
-if(process.env.MODE === "production") {
-    app.use(`/`, (req,res,next) => {
-        return res.sendFile(path.resolve(__dirname,`./client/build/index.html`))
-        next()
-    })
+// if(process.env.MODE === "production") {
+//     app.use(`/`, (req,res,next) => {
+//         return res.sendFile(path.resolve(__dirname,`./client/build/index.html`))
+//         next()
+//     })
     
-}
+// }
 
 if(process.env.MODE === "development"){
     app.get(`/`, async (req,res) =>{
