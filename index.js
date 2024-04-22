@@ -38,7 +38,7 @@ app.use(fileUpload({
     
 // }
 
-if(process.env.MODE === "development"){
+if(process.env.MODE === "production"){
     app.get(`/`, async (req,res) =>{
         return res.status(StatusCodes.OK).json({ status: true, msg: "Welcome to Project-LMS-API"})
        
